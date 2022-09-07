@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace PaymentService.Entities {
     public class Installment {
@@ -10,6 +11,11 @@ namespace PaymentService.Entities {
         public Installment(DateTime dueDate, double amount) {
             DueDate = dueDate;
             Amount = amount;
+        }
+
+        // Methods
+        public override string ToString() {
+            return $"{DueDate.ToString("dd/MM/yyyy")} - {Amount.ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }

@@ -3,12 +3,12 @@
 namespace PaymentService.Services {
     public class PaypalService : IOnlinePaymentService {
         //Methods
-        public double Interest(double Amount, int Months) {
-            throw new NotImplementedException();
+        public double Interest(double amount, int months) {
+            return amount * months * 0.01;
         }
 
-        public double PaymentFee(double Amount) {
-            throw new NotImplementedException();
+        public double PaymentFee(double amount) {
+            return amount * 0.02;
         }
     }
 }
